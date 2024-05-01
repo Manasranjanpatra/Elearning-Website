@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        section{
+
+            /* background-color: burlywood; */
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width:100%;
+            height:100vh;
+            overflow: hidden;
+
+        }
+
+        .containerr {
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28rem;
+            height: 35rem;
+            /* background-color: blueviolet; */
+            padding:3rem;
+        }
+
+        .logleg {
+            /* margin: auto; */
+            position: absolute;
+            width: 26rem;
+            height: 33rem;
+            background-color: rgb(14, 14, 165);
+            box-shadow: 0  10px 10px black;
+            transition: left 9s;
+        }
+
+        .formlogin {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+            overflow: hidden;
+            transition: left 9s;
+            transition-delay: 0.3s;
+        }
+
+        .formloginreg {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 10px;
+            /* border: 2px solid rgb(174, 96, 96); */
+            border-bottom-right-radius: 10px;
+            /* border: 2px solid black; */
+            color: white;
+            transform: translateX(0px);
+            overflow: hidden;
+            transition: left 9s;
+            transition-delay: 0.3s;
+        }
+
+        .formlogin h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .formloginreg h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .formlogin .inputbox {
+            position: relative;
+            width: 340px;
+            height: 50px;
+            border-bottom: 3px solid white;
+            margin: 30px 0;
+
+        }
+
+        .formloginreg .inputbox {
+            position: relative;
+            width: 340px;
+            height: 50px;
+            border-bottom: 3px solid white;
+            margin: 30px 0;
+        }
+
+        .inputbox input {
+            background: transparent;
+            border: none;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 18px;
+            color: white;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            pointer-events: none;
+            font-size: 19px;
+            transition: .5s ease;
+        }
+
+        .inputbox input:focus~label,
+        .inputbox input:valid~label {
+            top: -5px;
+        }
+
+
+        .inputbox .iconn {
+            position: absolute;
+            right: 0;
+            top: 13px;
+            font-size: 19px;
+        }
+
+        .remember {
+            font-size: 18px;
+            margin: 14px 0px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .rema {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn {
+            margin: 10px 0px;
+            width: 100%;
+            height: 29px;
+            box-shadow: 0px 3px 2px;
+            font-size: 16px;
+            cursor: pointer;
+            background:  #ff004f;;
+            padding:15px 0;
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn:focus{
+            background-color: #ef004c;
+        }
+        .rema:hover {
+            text-decoration: underline;
+        }
+
+        .remember label input {
+            margin-right: 7px;
+        }
+
+        .login-register {
+            font-size: 17px;
+            text-align: center;
+        }
+        .login-register p{
+            word-spacing: 3px;
+
+        }
+
+        .login-register p a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .wrapper {
+            /* transform: translateX(550px); */
+            top: 100rem;
+            transition: left 9s;
+
+
+            overflow: hidden;
+            /* left:0; */
+        }
+
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(255, 255, 255, 0.824);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        @media screen and (max-width:450px) {
+            .containerr {
+           
+            width: 27rem;
+          
+        }
+        
+        .logleg {
+           
+            width: 23rem;
+            /* left:1rem; */
+         
+
+        }
+        .formloginreg .inputbox {
+            
+            width: 311px;
+           
+        }
+        .formlogin .inputbox {
+            
+            width: 311px;
+         
+
+        }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+
+  <section>
+    <div class="containerr">
+        <div class="logleg">
+            <div class="formlogin">
+                <form class="signin" action="#">
+                    <h2>Sign in</h2>
+
+                    <div class="inputbox">
+                        <span class="iconn"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" placeholder="" required />
+                        <label>Email</label>
+
+                    </div>
+                    <div class="inputbox">
+                        <span class="iconn"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" required />
+                        <label>Password</label>
+                    </div>
+                    <div class="remember">
+                        <label>
+                            <input type="checkbox">Remember me
+                        </label>
+                        <a href="#" class="rema">forgot password</a>
+                        
+                    </div>
+
+                    <button type="submit" class="btn">Sign in </button>
+                    <div class="login-register">
+                        <p> Don't  have  an account ? <a href="#" class="loa">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="formloginreg  wrapper">
+                <form class="signin" action="#">
+                    <h2>Sign up</h2>
+                    <div class="inputbox">
+                        <span class="iconn"><i class="fa-solid fa-user"></i></span>
+                        <input type="email" required />
+                        <label>Name</label>
+
+                    </div>
+
+                    <div class="inputbox">
+                        <span class="iconn"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" required />
+                        <label>Email</label>
+
+                    </div>
+                    <div class="inputbox">
+                        <span class="iconn"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" required />
+                        <label>Password</label>
+                    </div>
+                    <div class="remember"> 
+                        <label>
+                            <input type="checkbox">Agree to the  terms &  conditions
+                        </label>
+                       
+                    </div>
+
+                    <button type="submit" class="btn">Sign up </button>
+                    <div class="login-register">
+                        <p> I have  already  an account? <a href="#" class="loa" id="up">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ----navabar----- -->
+  </section>
+
+    <script>
+        const signinn = document.querySelector(".loa");
+        const signup = document.querySelector("#up");
+
+
+
+        signinn.addEventListener('click', () => {
+            document.querySelector(".formloginreg").classList.remove("wrapper");
+            document.querySelector(".formlogin").classList.add("wrapper");
+        })
+        signup.addEventListener('click', () => {
+            document.querySelector(".formlogin").classList.remove("wrapper");
+            document.querySelector(".formloginreg").classList.add("wrapper");
+        })
+        // open();
+    </script>
+
+</body>
+
+</html>
